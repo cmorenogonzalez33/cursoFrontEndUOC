@@ -1,230 +1,437 @@
 :root {
-  --main-color: #0044ff;
-  --alt-color: #007711;
-  --title: aquamarine;
+	--main-color: #0044ff;
+	--alt-color: #007711;
+	--title: aquamarine;
 }
 
 html {
-  scroll-behavior: smooth; /* fa que els salts entre enllaços siguis suaus */
+	scroll-behavior: smooth; /* fa que els salts entre enllaços siguis suaus */
 }
 
 body {
-  margin: 0; /* elimina espai blanc entre contingut i les vores del viewport (pantalla) */
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+	margin: 0; /* elimina espai blanc entre contingut i les vores del viewport (pantalla) */
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 table {
-  margin: auto; /* centrat automàtic */
+	margin: auto; /* centrat automàtic */
 }
 table,
 th,
 td {
-  border: 1px solid black;
-  text-align: center;
+	border: 1px solid black;
+	text-align: center;
 }
 th,
 td {
-  padding: 1rem; /* espai entre les vores i el contingut */
+	padding: 1rem; /* espai entre les vores i el contingut */
 }
 .header {
-  display: flex; /* permet posicionar el contingut dels elements fills */
-  justify-content: space-between; /* provar amb altres alternatives: center, space-evenly, flex-start, flex-end i veure què passa */
-  align-items: center;
-  background-color: #222; /* color de fons */
-  padding: 1rem;
+	display: flex; /* permet posicionar el contingut dels elements fills */
+	justify-content: space-between; /* provar amb altres alternatives: center, space-evenly, flex-start, flex-end i veure què passa */
+	align-items: center;
+	background-color: #222; /* color de fons */
+	padding: 1rem;
 }
 .header ul {
-  display: flex;
-  list-style: none; /* elimina els punts de la llista (provar què passa si es treu) */
-  gap: 1rem;
+	display: flex;
+	list-style: none; /* elimina els punts de la llista (provar què passa si es treu) */
+	gap: 1rem;
 }
 .header a {
-  color: white; /* color de la lletra */
-  text-decoration: none; /* decoració del text. Prova què passa si es treu */
+	color: white; /* color de la lletra */
+	text-decoration: none; /* decoració del text. Prova què passa si es treu */
 }
 .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* es força una alçada */
-  background-image: url("https://picsum.photos/id/1021/1200/300"); /* es posa una imatge de fons a partir d'un recurs local o extern. Si és un recurs local: url('assets/lamevaimatge.jpg') */
-  background-size: cover; /* forçar que la imatge de fons cobreixi tot l'espai del seu contenidor */
-  color: var(--title);
-  text-shadow: 0 0 5px green;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px; /* es força una alçada */
+	background-image: url('https://picsum.photos/id/1021/1200/300'); /* es posa una imatge de fons a partir d'un recurs local o extern. Si és un recurs local: url('assets/lamevaimatge.jpg') */
+	background-size: cover; /* forçar que la imatge de fons cobreixi tot l'espai del seu contenidor */
+	color: var(--title);
+	text-shadow: 0 0 5px green;
 }
 h1 {
-  color: white;
-  font-size: 4rem;
-  text-shadow: 0 0 4px black; /* ombrejat al voltant del text */
+	color: white;
+	font-size: 4rem;
+	text-shadow: 0 0 4px black; /* ombrejat al voltant del text */
 }
 h2 {
-  text-align: center; /* provar amb left o right */
-  font-size: 2rem; /* mida del text */
-  margin-bottom: 3rem;
+	text-align: center; /* provar amb left o right */
+	font-size: 2rem; /* mida del text */
+	margin-bottom: 3rem;
 }
 section {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 700px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	height: 700px;
+	margin: 50px;
 }
 .bg-gray {
-  background-color: #eee;
+	background-color: #eee;
 }
+
+.lenguas {
+	margin: 50px;
+	position: relative;
+	top: 10px;
+}
+
+.articulos {
+	margin: auto;
+	position: relative;
+	top: 100px;
+}
+
 .index {
-  display: flex;
-  list-style: none;
-  margin: auto;
+	display: flex;
+	list-style: none;
+	margin: auto;
 }
 .dades {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 .index {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
 }
 .index li a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 section > * {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 80vw; /* es permet una amplada màxima del 80% de la mida del viewport o pantalla */
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 80vw; /* es permet una amplada màxima del 80% de la mida del viewport o pantalla */
 }
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 2rem;
-  margin-top: 4rem;
-  background-color: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+	margin-top: 4rem;
+	background-color: #222;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height: 80vh; /* <-- añade esta regla */
-  overflow-y: scroll; /* <-- añade esta regla */
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+	height: 80vh; /* <-- añade esta regla */
+	overflow-y: scroll; /* <-- añade esta regla */
 }
 
 .color {
-  background-color: blue;
+	background-color: blue;
 }
 
 .tobpar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #222;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: #222;
 }
 
 nav {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
 nav a {
-  color: rgb(227, 69, 69);
+	color: rgb(227, 69, 69);
 }
 
 a {
-  color: var(--main-color);
-  text-decoration: none;
+	color: var(--main-color);
+	text-decoration: none;
 }
 
 .hero {
-  display: grid;
-  place-content: center;
-  /* display: flex;
+	display: grid;
+	place-content: center;
+	/* display: flex;
   justify-content: center;
   align-items: center; */
-  height: 20rem;
-  background-image: url("images/hero.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+	height: 20rem;
+	background-image: url('images/hero.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .apartat-a_contingut {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex: auto;
-  width: 80vw;
-  margin: 20px auto;
-  gap: 20 px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*flex: auto;*/
+	width: 80vw;
+	margin: 20px auto;
+	gap: 20 px;
 }
 
 .cards {
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  /* flex-direction: row; */
-  flex-wrap: wrap;
-  /*margin-top: 10rem;*/
-  margin: 10rem auto;
-  width: 80vw;
+	display: flex;
+	justify-content: center;
+	gap: 5rem;
+	/* flex-direction: row; */
+	flex-wrap: wrap;
+	margin-top: 10rem;
+	margin: 10rem auto;
+	width: 80vw;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  width: 20vw;
-  flex: 1 0 15rem;
-  /*flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	flex: 1 0 15rem;
+	/*flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 15rem;*/
-  border: 1px solid #222;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 15px 15px #666;
+	border: 1px solid #222;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 0 15px 15px #666;
+}
+
+.apartat-a_contingut img {
+	float: right;
+}
+
+.aficiones {
+	/*background-color: #567895;*/
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+	flex: 1 0 15rem;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 50px;
+}
+
+.af {
+	background-color: #567895;
+	padding: 20px;
+	justify-content: space-between;
 }
 
 .card > p {
-  padding: 1rem;
+	padding: 1rem;
 }
 
 .card > button {
-  margin: 1rem;
-  padding: 0.5rem 1rem;
+	margin: 1rem;
+	padding: 0.5rem 1rem;
 }
 
 /* 
 s'aplicarà per pantalles de COM A MÀXIM 600px, o el que és el mateix, pantalles MÉS PETITES de 600px
 */
 @media only screen and (max-width: 600px) {
-  body {
-    background-color: aquamarine;
-  }
+	body {
+		background-color: aquamarine;
+	}
+
+	.experiencia_container {
+		flex-direction: column;
+	}
+
+	.svg-container {
+		flex-direction: column;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-  body {
-    background-color: rgb(255, 127, 212);
-  }
+	body {
+		background-color: rgb(255, 127, 212);
+	}
+
+	.experiencia_container {
+		flex-direction: column;
+	}
+
+	.svg-container {
+		flex-direction: column;
+	}
 }
 
 @media only screen and (max-width: 992px) {
-  body {
-    background-color: rgb(232, 255, 127);
-  }
+	body {
+		background-color: rgb(232, 255, 127);
+	}
 }
 
 @media only screen and (min-width: 1200px) {
-  body {
-    background-color: rgb(127, 146, 255);
-  }
+	body {
+		background-color: rgb(127, 146, 255);
+	}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+	margin: 10;
+	padding: 10;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	margin: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 200px;
+	height: 200px;
+}
+
+.background-circle {
+	/* width = container's size (200px) - ( 2 * svg's stroke-width (24px) ) .
+        Increase a little bit */
+	width: 156px;
+	height: 156px;
+	border-radius: 50%;
+	box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.2);
+
+	/* To center it inside the container.
+        margin = ( container's size (200px) - the element's size (156px) ) / 2
+        */
+	margin: 22px;
+	position: absolute;
+}
+
+.foreground-circle {
+	width: 180px;
+	height: 180px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* To start the svg circle from the top */
+	transform: rotate(-90deg);
+
+	/* To center it inside the container */
+	position: absolute;
+	margin: 10px;
+}
+
+.foreground-circle svg circle {
+	/* stroke-dasharray = 2 * (22/7) * svg's radius value (90px)*/
+	stroke-dasharray: 566;
+}
+
+.text-inside-circle {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+}
+
+#number-inside-circle {
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.remaining-text {
+	font-weight: 400;
+	font-size: 0.7rem;
+}
+
+.button-click {
+	background-color: #50c878;
+	border: 1px solid transparent;
+	padding: 0.4em 0.8em;
+	border-radius: 0.4em;
+	color: whitesmoke;
+	cursor: pointer;
+	margin-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+/* To prevent svg border being cut off */
+svg:not(:root) {
+	overflow: visible;
+}
+
+.apartat-a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.dark {
+	background-color: #222;
+}
+
+.experiencia {
+	color: white;
+	padding: 2rem;
+	background-color: #222;
+	display: flex;
+	flex-direction: row;
+}
+
+.round {
+	transform: rotate(-90deg);
+	transition: all 1s ease-in-out;
+	/* SVG */
+	fill: none;
+	stroke-width: 8;
+	stroke-linecap: round;
+	flex-direction: row;
+}
+
+.experiencia_container {
+	padding: 2rem;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.svg-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: row;
+}
+
+.percentage {
+	position: absolute;
+	margin: auto;
+	font-size: 2rem;
+	color: #222;
+}
+
+.dark .percentage,
+.dark h2 {
+	color: white;
 }

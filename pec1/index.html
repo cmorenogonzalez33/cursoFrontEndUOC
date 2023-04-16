@@ -4,8 +4,25 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Landing</title>
+		<!--font awesome-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css"
+			integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Inicio</title>
 		<link rel="stylesheet" href="style.css" />
+		<!--font awesome-->
+		<script src="https://kit.font-awesome.com/9180fd52b9.js" crossorigin="anonymous"></script>
 		<!-- <style>
     .color {
       background-color: red;
@@ -26,7 +43,7 @@
 		</header>
 
 		<section class="hero">
-			<h1 class="title">Bienvenido</h1>
+			<h1 class="title">El meu portfolio</h1>
 		</section>
 
 		<section class="apartat-a">
@@ -36,7 +53,7 @@
 					Hello, I'm Cristina, a developer design, I help people turn great product ideas into
 					market ready solutions
 				</p>
-				<img src="images/smile.svg" alt="cara somrient" height="300" />
+				<img src="images/foto1.png" alt="cara somrient" height="300" />
 				<p>
 					Do you have a product idea you want to create, but unsure how? If you dream of starting a
 					successful product-based business GREAT - I CAN HELP YOU
@@ -52,7 +69,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section class="apartat-a">
 			<h2 class="title">Mis Proyectos</h2>
 			<div class="cards">
 				<article class="card">
@@ -95,5 +112,76 @@
 				</article>
 			</div>
 		</section>
+		<!-- Si tenim els svg els podem inserir directament en codi -->
+
+		<article class="experiencia_container dark">
+			<h2>Experiencia</h2>
+			<!-- Si obriu el fitxer img/grafic_html.svg i copieu el codi i l'enganxeu, quedarà el següent -->
+
+			<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+			<!-- Created with Inkscape (http://www.inkscape.org/) -->
+			<div class="svg-container">
+				<svg
+					class="round"
+					viewbox="0 0 100 100"
+					width="200"
+					height="200"
+					data-percent="90"
+					stroke="orange"
+					stroke-dasharray="226  1000"
+				>
+					<circle cx="50" cy="50" r="40" />
+				</svg>
+				<p class="percentage">HTML</p>
+			</div>
+			<div class="svg-container">
+				<svg
+					class="round"
+					viewbox="0 0 100 100"
+					width="200"
+					height="200"
+					data-percent="85"
+					stroke="blue"
+					stroke-dasharray="213 1000"
+				>
+					<circle cx="50" cy="50" r="40" />
+				</svg>
+				<p class="percentage">CSS</p>
+			</div>
+			<div class="svg-container">
+				<svg
+					class="round"
+					viewbox="0 0 100 100"
+					width="200"
+					height="200"
+					data-percent="65"
+					stroke="yellow"
+					stroke-dasharray="175 1000"
+				>
+					<circle cx="50" cy="50" r="40" />
+				</svg>
+				<p class="percentage">JS</p>
+			</div>
+		</article>
+		<article>
+			<h2>Aficiones</h2>
+			<div class="aficiones">
+				<div class="af">Viajar<i class="fa-solid fa-plane" style="margin-left: 40px"></i></div>
+				<div class="af">Ver TV<i class="fa-solid fa-desktop" style="margin-left: 40px"></i></div>
+				<div class="af">Música<i class="fa-solid fa-headphones" style="margin-left: 40px"></i></div>
+				<div class="af">Pasear<i class="fa-solid fa-bicycle" style="margin-left: 40px"></i></div>
+				<div class="af">Leer<i class="fa-solid fa-book" style="margin-left: 40px"></i></div>
+				<div class="af">
+					Quedar con amigos<i class="fa-solid fa-mug-hot" style="margin-left: 40px"></i>
+				</div>
+			</div>
+		</article>
+		<footer class="footer">
+			<div class="social">
+				<img src="images/logo-twitter.svg" alt="logo twitter" width="50" height="50" />
+				<img src="images/logo-linkedin.svg" alt="logo linkedin" width="50" height="50" />
+				<img src="images/logo-instagram.svg" alt="logo instagram" width="50" height="50" />
+			</div>
+		</footer>
 	</body>
 </html>
