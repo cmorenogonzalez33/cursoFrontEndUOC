@@ -19,18 +19,29 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<title>CV</title>
 		<!--font awesome-->
 		<script src="https://kit.font-awesome.com/9180fd52b9.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<main>
-			<header>
+			<header class="tobpar">
+				<a href="index.html">
+					<img src="images/home.svg" alt="home icon" />
+				</a>
+				<nav>
+					<a href="index.html">Inicio</a>
+					<a href="cv.html">CV</a>
+					<a href="contacto.html">Contacto</a>
+					<a href="pac2.html">PAC 2</a>
+				</nav>
+			</header>
+			<section>
 				<div>
 					<h1>Cristina Moreno González</h1>
 					<h2 id="profesion">Copywriter</h2>
-					<nav>
+					<nav class="naveg">
 						<ul>
 							<li>
 								<a href="#perfil"> Datos personales </a>
@@ -45,12 +56,12 @@
 								<a href="#experiencia"> Experiencia </a>
 							</li>
 						</ul>
-					</nav>
+					</naveg>
 				</div>
 				<picture>
 					<img src="images/avatar.jpg" alt="avatar" title="Cristina Moreno González" />
 				</picture>
-			</header>
+			</section>
 			<section>
 				<article class="articulos">
 					<a name="perfil"></a>
@@ -177,6 +188,7 @@
 					<img src="images/logo-instagram.svg" alt="logo instagram" width="50" height="50" />
 				</div>
 			</footer>
+			<noscript>JS no soportado</noscript>
 		</main>
 	</body>
 </html>

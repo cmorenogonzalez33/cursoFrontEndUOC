@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PAC 2</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/transformicons.css" />
+	</head>
+	<body>
+		<main>
+			<header class="tobpar">
+				<a href="index.html">
+					<img src="images/home.svg" alt="home icon" />
+				</a>
+				<nav>
+					<a href="index.html">Inicio</a>
+					<a href="cv.html">CV</a>
+					<a href="contacto.html">Contacto</a>
+					<a href="pac2.html">PAC 2</a>
+				</nav>
+            </header>
+            <section class="main-header">
+			    <div class="overflow-control">
+				    <div class="main-container">
+					    <div class="lateral-menu">
+                            <ul>
+                                <li type="button" onclick="ejecutar()">Sumar</li>
+                                <li type="button" onclick="ejecutar()">Primos</li>
+                                <li type="button" onclick="ejecutar()">Pares</li>
+                            </ul>
+					    </div>
+					<div class="content">
+						<nav class="naveg">
+							<div class="button-nav">
+								<button
+									type="button"
+									class="tcon toggle-menu tcon-menu--arrow tcon-menu--arrow360left"
+									aria-label="toggle menu"
+								>
+									<span class="tcon-menu__lines" aria-hidden="true"></span>
+									<span class="tcon-visuallyhidden">toggle menu</span>
+								</button>
+							</div>
+                            <ul>
+                                <li type="button" onclick="ejecutar()">Sumar</li>
+                                <li type="button" onclick="ejecutar()">Primos</li>
+                                <li type="button" onclick="ejecutar()">Pares</li>
+                            </ul>
+						</nav>
+						<div class="button-nav">
+							<p><button type="button" onclick="ejecutar()">Ver resultado</button></p>
+						</div>
+					</div>
+				</div>
+			</section>
+            <noscript>JS no soportado</noscript>
+			<script src="./js/transformicons.js"></script>
+			<script src="./js/main.js"></script>
+		</main>
+	</body>
+</html>

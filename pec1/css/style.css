@@ -68,8 +68,8 @@ section {
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	height: 700px;
-	margin: 50px;
+	height: 100%;
+	/*margin: 50px;*/
 }
 .bg-gray {
 	background-color: #eee;
@@ -81,10 +81,50 @@ section {
 	top: 10px;
 }
 
+.hero-image {
+	height: 75vh;
+	background: url('background.png'), black;
+	background-size: cover;
+	background-position: center;
+	padding: 2em;
+	color: white;
+
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 5%;
+}
+.hero-image h1 {
+	font-size: 72px;
+	margin: 0px;
+	text-shadow: 0px 0px 4px #000;
+}
+.hero-image p {
+	font-size: 24px;
+	text-shadow: 0px 0px 2px #000;
+}
+.naveg li {
+	display: inline-block;
+	margin-right: 1em;
+	padding: 10px;
+	vertical-align: middle;
+	align-items: center;
+}
+
+.button-nav {
+	margin-left: 20px;
+}
+
+.naveg .button-nav {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .articulos {
 	margin: auto;
 	position: relative;
 	top: 100px;
+	align-items: center;
+	height: 100%;
 }
 
 .index {
@@ -147,16 +187,25 @@ section > * {
 
 nav {
 	display: flex;
+	justify-content: right;
 	gap: 1rem;
+	/*background-color: #303f9f;*/
+	color: white;
+	width: 100%;
+	padding: 5px;
+	align-items: center;
+	cursor: pointer;
 }
 
 nav a {
 	color: rgb(227, 69, 69);
+	align-items: center;
 }
 
 a {
 	color: var(--main-color);
 	text-decoration: none;
+	font-size: large;
 }
 
 .hero {
@@ -165,11 +214,81 @@ a {
 	/* display: flex;
   justify-content: center;
   align-items: center; */
+	margin: 0;
 	height: 20rem;
 	background-image: url('images/hero.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.overflow-control {
+	overflow-x: hidden;
+}
+.main-container {
+	white-space: nowrap;
+	position: relative;
+	left: -300px;
+	transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-container.open {
+	left: 0px;
+}
+
+.main-container * {
+	white-space: normal;
+}
+
+.main-container .content,
+.main-container .lateral-menu {
+	display: inline-block;
+	margin-right: -4px;
+	vertical-align: top;
+	height: 100vh;
+}
+.main-container .lateral-menu {
+	width: 300px;
+	background-color: #222;
+	color: white;
+	text-align: center;
+}
+
+.main-container .lateral-menu li {
+	font-size: 32px;
+	padding: 8px 15px;
+	list-style-type: none;
+	border-bottom: solid 2px #eee;
+}
+
+.main-container .content {
+	/*overflow-y: scroll;*/
+	scroll-behavior: smooth;
+}
+.main-container .content {
+	width: 100%;
+}
+
+.hero-image {
+	height: 75vh;
+	background: url('background.png'), black;
+	background-size: cover;
+	background-position: center;
+	padding: 2em;
+	color: white;
+
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 5%;
+}
+.hero-image h1 {
+	font-size: 72px;
+	margin: 0px;
+	text-shadow: 0px 0px 4px #000;
+}
+.hero-image p {
+	font-size: 24px;
+	text-shadow: 0px 0px 2px #000;
 }
 
 .apartat-a_contingut {
@@ -181,14 +300,15 @@ a {
 	width: 80vw;
 	margin: 20px auto;
 	gap: 20 px;
+	/*flex-wrap: wrap;*/
 }
 
 .cards {
 	display: flex;
 	justify-content: center;
 	gap: 5rem;
-	/* flex-direction: row; */
-	flex-wrap: wrap;
+	/* flex-direction: row; 
+	flex-wrap: wrap;*/
 	margin-top: 10rem;
 	margin: 10rem auto;
 	width: 80vw;
@@ -218,8 +338,9 @@ a {
 	flex-direction: row;
 	margin-bottom: 5px;
 	flex: 1 0 15rem;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	align-items: center;
+	justify-content: center;
 	gap: 50px;
 }
 
@@ -246,6 +367,10 @@ s'aplicarà per pantalles de COM A MÀXIM 600px, o el que és el mateix, pantall
 		background-color: aquamarine;
 	}
 
+	.naveg li {
+		color: #000;
+	}
+
 	.experiencia_container {
 		flex-direction: column;
 	}
@@ -260,6 +385,10 @@ s'aplicarà per pantalles de COM A MÀXIM 600px, o el que és el mateix, pantall
 		background-color: rgb(255, 127, 212);
 	}
 
+	.naveg li {
+		color: #000;
+	}
+
 	.experiencia_container {
 		flex-direction: column;
 	}
@@ -271,7 +400,11 @@ s'aplicarà per pantalles de COM A MÀXIM 600px, o el que és el mateix, pantall
 
 @media only screen and (max-width: 992px) {
 	body {
-		background-color: rgb(232, 255, 127);
+		background-color: #047990;
+	}
+
+	.naveg li {
+		color: white;
 	}
 }
 
@@ -383,7 +516,7 @@ svg:not(:root) {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 }
 
 .dark {
@@ -413,7 +546,7 @@ svg:not(:root) {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 }
 
 .svg-container {
@@ -434,4 +567,14 @@ svg:not(:root) {
 .dark .percentage,
 .dark h2 {
 	color: white;
+}
+
+label {
+	display: inline-block;
+	width: 80px;
+}
+
+input {
+	align-items: end;
+	padding: 0.5rem;
 }
