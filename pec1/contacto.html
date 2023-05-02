@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contacto</title>
 		<link rel="stylesheet" href="./css/style.css" />
-		<link rel="stylesheet" href="./css/transformicons.css" />
+		<link rel="stylesheet" href="./css/normalize.css" />
 		<script type="text/javascript">
 			function enableSending() {
 				document.loginform.submit.disabled = !document.loginform.terminos.checked
@@ -109,7 +109,12 @@
 								></textarea>
 							</p>
 							<div class="terms">
-								<input type="checkbox" name="terminos" onclick="enableSending()" />
+								<input
+									type="checkbox"
+									name="terminos"
+									onclick="enableSending()"
+									placeholder="Acepta los términos"
+								/>
 								<label for="terms"
 									><a href="./politicaprivacidad.html" target="_blank"
 										>Acepto Condiciones Generales</a
