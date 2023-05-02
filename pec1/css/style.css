@@ -574,7 +574,8 @@ label {
 	width: 80px;
 }
 
-input {
+input,
+textarea {
 	align-items: end;
 	padding: 0.5rem;
 }

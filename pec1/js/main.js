@@ -30,68 +30,85 @@ function esPar(numero) {
 function ejecutar() {
 	let num1, num2
 
-	do {
-		num1 = parseInt(prompt('Por favor, teclee un primer número entre 1 y 50: ', 20))
-	} while (num1 < 1 || num1 > 50)
+	num1 = prompt('Por favor, teclee un primer número entre 1 y 50: ', 20)
 
-	do {
-		num2 = parseInt(prompt('Por favor, teclee un segundo número entre 1 y 50: ', 10))
-	} while (num2 < 1 || num2 > 50)
+	num2 = prompt('Por favor, teclee un segundo número entre 1 y 50: ', 10)
 
-	if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+	if (isNaN(num1) || isNaN(num2) || num1 < 1 || num1 > 50 || num2 < 1 || num2 > 50) {
 		alert('¡Los valores introducidos tienen que ser números enteros positivos entre 1 y 50!')
 	} else {
+		num1 = parseInt(num1)
+
+		num2 = parseInt(num2)
+
 		let result = ''
 
 		result += 'La suma de ' + num1 + ' y ' + num2 + ' es: ' + sumar(num1, num2) + '\n'
 		result += 'El ' + num1
 
 		if (!esPrimo(num1)) {
-			result += ' no '
+			result += ' no'
 		}
 
-		result += 'es primo '
+		result += ' es primo '
 
 		if (num1 !== num2) {
 			result += 'y el ' + num2
 
 			if (!esPrimo(num2)) {
-				result += ' no '
+				result += ' no'
 			}
 
-			result += 'es primo \n El ' + num1 + ' es '
+			result += ' es primo \nEl ' + num1 + ' es '
 
 			if (!esPar(num1)) {
-				result += ' impar '
+				result += 'impar'
 			} else {
-				result += ' par '
+				result += 'par'
 			}
 
 			result += ' y el ' + num2 + ' es '
 
 			if (!esPar(num2)) {
-				result += ' impar'
+				result += 'impar'
 			} else {
-				result += ' par'
+				result += 'par'
 			}
 
 			result += '\n'
+			let cont = 0
 
 			if (num1 < num2) {
-				for (let i = num1; i < num2; i++) {
+				for (let i = num1; i <= num2; i++) {
 					if (i % 2 === 0) {
-						result += i + '\t'
+						result += i
+						cont++
+					} else if (i < num2 - 1 && i !== num1) {
+						result += '\t'
+					}
+
+					if (cont === 13) {
+						cont = 0
+						result += '\n'
 					}
 				}
 			} else {
-				for (let i = num1; i > num2; i--) {
+				for (let i = num1; i >= num2; i--) {
 					if (i % 2 !== 0) {
-						result += i + '\t'
+						result += i
+						cont++
+					} else if (i > num2 && i !== num1) {
+						result += '\t'
+					}
+
+					if (cont === 13) {
+						cont = 0
+						result += '\n'
 					}
 				}
 			}
 		} else {
-			result += '\n El ' + num1
+			result += '\nEl ' + num1
 
 			if (!esPar(num1)) {
 				result += ' impar '
@@ -99,7 +116,7 @@ function ejecutar() {
 				result += ' par '
 			}
 
-			result += '\n Rango: ' + num1
+			result += '\nRango: ' + num1
 		}
 
 		alert(result)
