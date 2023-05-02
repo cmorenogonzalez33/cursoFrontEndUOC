@@ -216,7 +216,7 @@ a {
   align-items: center; */
 	margin: 0;
 	height: 20rem;
-	background-image: url('images/hero.jpeg');
+	background-image: url('../images/hero.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -578,4 +578,11 @@ input,
 textarea {
 	align-items: end;
 	padding: 0.5rem;
+	width: 100%;
+}
+
+.terms {
+	display: grid;
+	gap: 11px;
+	grid-template-columns: 39px 1fr;
 }
