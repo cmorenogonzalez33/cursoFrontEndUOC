@@ -39,8 +39,6 @@ function ejecutar() {
 	} while (num2 < 1 || num2 > 50)
 
 	if (typeof num1 !== 'number' || typeof num2 !== 'number') {
-		alert('Num1:' + typeof num1)
-		alert('Num2: ' + typeof num2)
 		alert('¡Los valores introducidos tienen que ser números enteros positivos entre 1 y 50!')
 	} else {
 		let result = ''
@@ -61,7 +59,7 @@ function ejecutar() {
 				result += ' no '
 			}
 
-			result += 'es primo \n + El ' + num1 + ' es '
+			result += 'es primo \n El ' + num1 + ' es '
 
 			if (!esPar(num1)) {
 				result += ' impar '
