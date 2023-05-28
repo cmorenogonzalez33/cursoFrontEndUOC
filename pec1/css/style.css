@@ -291,7 +291,7 @@ a {
 	text-shadow: 0px 0px 2px #000;
 }
 
-.apartat-a_contingut {
+.apartat-a__contingut {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -328,7 +328,7 @@ a {
 	box-shadow: 0 0 15px 15px #666;
 }
 
-.apartat-a_contingut img {
+.apartat-a__contingut img {
 	float: right;
 }
 
@@ -541,7 +541,7 @@ svg:not(:root) {
 	flex-direction: row;
 }
 
-.experiencia_container {
+.experiencia__container {
 	padding: 2rem;
 	display: flex;
 	justify-content: space-evenly;

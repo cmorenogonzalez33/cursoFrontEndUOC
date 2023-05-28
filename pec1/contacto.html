@@ -5,13 +5,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contacto</title>
-		<link rel="stylesheet" href="./css/style.css" />
+		<meta name="description" content="Portfolio de Cristina Moreno González." />
+		<meta
+			name="keywords"
+			content="programador, desarrollador, desarrollo Web, administrador de sistemas, bases de datos, javascript, python, data scientist"
+		/>
 		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/style.css" />
 		<script type="text/javascript">
 			function enableSending() {
 				document.loginform.submit.disabled = !document.loginform.terminos.checked
 			}
 		</script>
+		<noscript>JS no soportado</noscript>
 	</head>
 	<body>
 		<main>
@@ -27,14 +33,14 @@
 				</nav>
 			</header>
 			<section>
-				<div class="contact_form">
+				<div class="contact__form">
 					<div class="formulario">
 						<h1>Formulario de contacto</h1>
 						<h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
 
 						<form action="submeter-formulario.php" method="post">
 							<p>
-								<label for="nombre" class="colocar_nombre"
+								<label for="nombre" class="colocar__nombre"
 									>Nombre
 									<span class="obligatorio">*</span>
 								</label>
@@ -48,7 +54,7 @@
 							</p>
 
 							<p>
-								<label for="email" class="colocar_email"
+								<label for="email" class="colocar__email"
 									>Email
 									<span class="obligatorio">*</span>
 								</label>
@@ -62,7 +68,7 @@
 							</p>
 
 							<p>
-								<label for="telefone" class="colocar_telefono">Teléfono </label>
+								<label for="telefone" class="colocar__telefono">Teléfono </label>
 								<input
 									type="tel"
 									name="introducir_telefono"
@@ -72,7 +78,7 @@
 							</p>
 
 							<p>
-								<label for="website" class="colocar_website">Sitio web </label>
+								<label for="website" class="colocar__website">Sitio web </label>
 								<input
 									type="url"
 									name="introducir_website"
@@ -82,7 +88,7 @@
 							</p>
 
 							<p>
-								<label for="asunto" class="colocar_asunto"
+								<label for="asunto" class="colocar__asunto"
 									>Asunto
 									<span class="obligatorio">*</span>
 								</label>
@@ -96,13 +102,13 @@
 							</p>
 
 							<p>
-								<label for="mensaje" class="colocar_mensaje"
+								<label for="mensaje" class="colocar__mensaje"
 									>Mensaje
 									<span class="obligatorio">*</span>
 								</label>
 								<textarea
 									name="introducir_mensaje"
-									class="texto_mensaje"
+									class="texto__mensaje"
 									id="mensaje"
 									required="obligatorio"
 									placeholder="Deja aquí tu comentario..."
@@ -130,7 +136,6 @@
 					</div>
 				</div>
 			</section>
-			<noscript>JS no soportado</noscript>
 		</main>
 	</body>
 </html>
