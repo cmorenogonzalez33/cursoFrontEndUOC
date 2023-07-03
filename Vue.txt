@@ -1,0 +1,141 @@
+<template>
+ 
+    <h1>{{ title }}</h1>
+ 
+ 
+    <PokemonDetails
+    :pokemonUrl="pokemonUrl"
+    />
+     
+    <PokeList
+    @showPokemonDetails="showPokemonDetails"
+    :pokemonImage="pokemonImage"
+    :pokemonList="pokemonList" />
+  
+</template>
+ 
+<script >
+ 
+import PokeList from './components/PokeList.vue'
+import PokemonDetails from './components/PokemonDetails.vue'
+ 
+export default {
+    data: () => ({
+        title: 'Pokédex en Vue JS',
+        apiUrl: 'https://pokeapi.co/api/v2/pokedex/2',
+        pokemonImage: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/',
+        pokemonUrl: '',
+        pokemonList: [],
+        showPokemonInfos: false
+    }),
+    components: {
+        PokeList,
+        PokemonDetails
+    },
+    async mounted() {
+        const pokeData = await fetch(this.apiUrl)
+        .then(response => response.json())
+ 
+        this.pokemonList = pokeData.pokemon_entries
+        console.log(this.pokemonList)
+    },
+    methods: {
+        showPokemonDetails(pokemonName) {
+            this.showPokemonInfos = true           
+            this.pokemonUrl = 'https://pokeapi.co/api/v2/pokemon/' + pokemonName
+            console.log(this.pokemonUrl)
+        }
+    }
+}
+</script>
+ 
+<style>
+ul li {
+    list-style: none;
+    width: 20%;
+    margin: 0 1%;
+    padding: 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+</style>
+
+--OTRA
+<template>
+    <ul>
+        <li  @click="getPokemonName(pokemon.pokemon_species.name)"
+        v-for="(pokemon, index) in pokemonList"
+        :key="`poke-${index}`">
+             
+            <div class="pokeCard">
+                <img :src="pokemonImage + pokemon.entry_number + '.png'" />
+                <p>{{ pokemon.pokemon_species.name }}</p>
+                <p>{{ pokemon.entry_number }}</p>
+            </div>
+             
+        </li>        
+    </ul>
+</template>
+ 
+<script>
+export default {
+    data: () => ({
+        pokemonName: ""
+    }),
+    props:  {
+        pokemonImage: String,
+        pokemonList: Array
+    },
+    methods: {
+        getPokemonName(pokemonName)
+        {  
+            this.pokemonName = pokemonName
+            this.$emit('showPokemonDetails', this.pokemonName)
+        }
+         
+    }
+}
+</script>
+ 
+<style scoped>
+.pokeCard:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px black;
+}
+ 
+</style>
+
+--otra
+
+<template>
+    <h2>Template de PokemonDetails</h2>
+    <p>{{ pokemonUrl }}</p>
+    <button>Retour</button>
+</template>
+ 
+<script>
+export default {
+    data: () => ({
+        pokemonDetails: {}
+    }),
+    props:  {
+        pokemonUrl: String
+    },
+    methods: {
+        fetchData() {
+            const pokeData = fetch(this.pokemonUrl)
+            .then(response => response.json())
+ 
+            this.pokemonDetails = pokeData
+            console.log(this.pokemonDetails)
+        }
+    },
+    created() {
+        this.fetchData()
+    }
+}
+</script>
+ 
+<style>
+ 
+</style>

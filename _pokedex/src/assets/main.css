@@ -1,0 +1,171 @@
+/* @import './base.css'; */
+
+@font-face {
+  font-family: "pokemon_hollow";
+  src: url("./font/Pokemon_Hollow.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "pokemon_solid";
+  src: url("./font/Pokemon_Solid.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html {
+  overflow-y: scroll;
+  
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  background-image: url("./img/pokemon-wallpapers-22.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  /* background-color: #333; */
+  /* filter: grayscale(100%) brightness(100%) contrast(100%) saturate(100%) blur(0px) invert(0%); */
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 0.5rem;
+}
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.774);
+    border-radius: 100%;
+    color: white;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1.5vh 1.5%;
+  height: 9vh;
+  max-height: 9vh;
+  border-bottom-style: solid;
+  border-bottom-width: 1vh;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1.5%;
+  height: 4vh;
+  max-height: 4vh;
+  border-top-style: solid;
+  border-top-width: 1vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1vh 1.5%;
+  height: 83vh;
+  max-height: 83vh;
+}
+
+.light-theme {
+  background-color: rgb(255, 255, 255, 0.85);
+  color: black;
+}
+
+.dark-theme {
+  background-color: rgba(8, 8, 8, 0.85);
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  padding: 0 0.5%;
+  background: none !important;
+}
+h1.light-theme {
+  font-family: "pokemon_solid", sans-serif;
+  color: black;
+}
+h1.dark-theme {
+  font-family: "pokemon_hollow", sans-serif;
+  color: white;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding: 0 0.5%;
+  background: none !important;
+}
+h2.light-theme {
+  font-family: "pokemon_solid", sans-serif;
+  color: black;
+}
+h2.dark-theme {
+  font-family: "pokemon_hollow", sans-serif;
+  color: white;
+}
+
+h3 {
+  font-size: 1.25rem;
+  padding: 0 0.5%;
+  background: none !important;
+}
+h3.light-theme {
+  font-family: "pokemon_solid", sans-serif;
+  color: black;
+}
+h3.dark-theme {
+  font-family: "pokemon_hollow", sans-serif;
+  color: white;
+}
+
+p, label, input, button, select, option {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 5%;
+}
+
+.theme-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+}
+
+.theme-buttons label, .theme-buttons input {
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr;
+    padding: 0 2rem; */
+  }
+}
+
+
